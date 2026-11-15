@@ -108,13 +108,16 @@ Histórico / Nova Experiência
 
 ## 5. Capturas de ecrã e demonstração
 
-<img src="docs/screenshots/splash.jpg" width="250" alt="Splash">
-
-<img src="docs/screenshots/home.jpg" width="250" alt="Página inicial">
-
-<img src="docs/screenshots/scan.jpg" width="250" alt="Scan">
-
-<img src="docs/screenshots/history.jpg" width="250" alt="Histórico">
+<table align="center">
+  <tr>
+    <td align="center"><img src="docs/screenshots/splash.jpg" width="220" alt="Splash"><br><sub>Splash</sub></td>
+    <td align="center"><img src="docs/screenshots/home.jpg" width="220" alt="Página inicial"><br><sub>Página inicial</sub></td>
+  </tr>
+  <tr>
+    <td align="center"><img src="docs/screenshots/scan.jpg" width="220" alt="Scan"><br><sub>Scan</sub></td>
+    <td align="center"><img src="docs/screenshots/history.jpg" width="220" alt="Histórico"><br><sub>Histórico</sub></td>
+  </tr>
+</table>
 
 
 ## 6. Como instalar e executar
