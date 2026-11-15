@@ -108,13 +108,13 @@ Histórico / Nova Experiência
 
 ## 5. Capturas de ecrã e demonstração
 
-![splashScreen](splash.jpg)
+<img src="docs/screenshots/splash.jpg" width="250" alt="Splash">
 
-![Página inicial](docs/screenshots/home.jpg)
+<img src="docs/screenshots/home.jpg" width="250" alt="Página inicial">
 
-![scan](scan.jpg) 
+<img src="docs/screenshots/scan.jpg" width="250" alt="Scan">
 
-![Historico](history.jpg) 
+<img src="docs/screenshots/history.jpg" width="250" alt="Histórico">
 
 
 ## 6. Como instalar e executar
