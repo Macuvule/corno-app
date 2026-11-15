@@ -1,56 +1,156 @@
-# Welcome to your Expo app 👋
+# CornoCheck — Aplicação Móvel de Entretenimento
 
-This is an [Expo](https://expo.dev) project created with [`create-expo-app`](https://www.npmjs.com/package/create-expo-app).
+Uma aplicação móvel de entretenimento que simula uma análise para verificar a possibilidade de infidelidade num relacionamento, utilizando uma experiência interactiva baseada na captura de uma fotografia e na apresentação de um resultado.
 
-## Get started
+O CornoCheck combina animações, utilização da câmara frontal e uma interface dinâmica para proporcionar uma experiência divertida e envolvente aos utilizadores.
 
-1. Install dependencies
+> **Aviso:** O CornoCheck é exclusivamente uma aplicação de entretenimento. Os resultados apresentados são fictícios e não constituem qualquer método científico ou real de detecção de infidelidade.
 
-   ```bash
-   npm install
-   ```
+## 1. Problema que procura resolver
 
-2. Start the app
+O CornoCheck não pretende resolver um problema social (INFIDELIDADE). O seu objectivo é proporcionar uma experiência de entretenimento digital, explorando a curiosidade e o humor em torno de relacionamentos.
 
-   ```bash
-   npx expo start
-   ```
+A aplicação transforma uma brincadeira popular numa experiência móvel interactiva, permitindo que os utilizadores participem numa simulação divertida através de uma fotografia e de uma sequência de animações.
 
-In the output, you'll find options to open the app in a
+## 2. Principais funcionalidades
 
-- [development build](https://docs.expo.dev/develop/development-builds/introduction/)
-- [Android emulator](https://docs.expo.dev/workflow/android-studio-emulator/)
-- [iOS simulator](https://docs.expo.dev/workflow/ios-simulator/)
-- [Expo Go](https://expo.dev/go), a limited sandbox for trying out app development with Expo
+- **Ecrã de apresentação (Splash Screen):** introdução visual à aplicação.
+- **Onboarding:** apresentação inicial da experiência e orientação do utilizador.
+- **Scanner animado:** simulação de um processo de análise antes da captura da fotografia.
+- **Captura de fotografia:** utilização da câmara frontal do dispositivo.
+- **Apresentação de resultados:** exibição de um resultado de entretenimento após a experiência.
+- **Navegação personalizada:** organização da experiência através de diferentes ecrãs e componentes de navegação.
+- **Persistência local:** armazenamento de informações no dispositivo utilizando MMKV.
+- **Experiência visual:** utilização de animações e elementos gráficos para tornar a aplicação mais envolvente.
 
-You can start developing by editing the files inside the **app** directory. This project uses [file-based routing](https://docs.expo.dev/router/introduction).
+## 3. Tecnologias utilizadas
 
-## Get a fresh project
+| Tecnologia | Finalidade |
+|---|---|
+| React Native | Desenvolvimento da aplicação móvel |
+| Expo SDK 57 | Ambiente e ferramentas de desenvolvimento |
+| TypeScript | Tipagem estática e organização do código |
+| Expo Router | Navegação e gestão de rotas |
+| MMKV | Armazenamento local de dados |
+| Expo Camera | Acesso à câmara do dispositivo |
+| NativeWind / Tailwind CSS | Estilização da interface |
 
-When you're ready, run:
+## 4. Arquitectura do sistema
 
-```bash
-npm run reset-project
+O projecto segue uma organização modular baseada em funcionalidades (*feature-based architecture*), separando a navegação, os componentes reutilizáveis, as funcionalidades e os serviços auxiliares.
+
+### Estrutura principal
+
+```text
+src/
+│
+├── app/
+│   ├── (app)/
+│   ├── onboarding/
+│   ├── _layout.tsx
+│   └── splash.tsx
+│
+├── components/
+│   ├── navigation/
+│   └── ui/
+│
+├── constants/
+│   └── theme.ts
+│
+├── features/
+│   ├── history/
+│   ├── home/
+│   ├── onboarding/
+│   └── splash/
+│
+├── lib/
+│   ├── hooks/
+│   └── storage.tsx
+│
+└── global.css
 ```
 
-This command will move the starter code to the **app-example** directory and create a blank **app** directory where you can start developing.
+### Responsabilidade dos principais módulos
 
-### Other setup steps
+- `app/`: gestão das rotas, navegação e composição dos ecrãs.
+- `components/`: componentes reutilizáveis e elementos de navegação.
+- `constants/`: configurações e constantes visuais da aplicação.
+- `features/`: implementação das funcionalidades organizadas por domínio.
+- `lib/`: funcionalidades auxiliares, hooks e mecanismos de armazenamento.
+- `assets/`: recursos gráficos e imagens utilizados na aplicação.
 
-- To set up ESLint for linting, run `npx expo lint`, or follow our guide on ["Using ESLint and Prettier"](https://docs.expo.dev/guides/using-eslint/)
-- If you'd like to set up unit testing, follow our guide on ["Unit Testing with Jest"](https://docs.expo.dev/develop/unit-testing/)
-- Learn more about the TypeScript setup in this template in our guide on ["Using TypeScript"](https://docs.expo.dev/guides/typescript/)
+### Fluxo geral da aplicação
 
-## Learn more
+```text
+Início
+  │
+  ▼
+Splash Screen
+  │
+  ▼
+Onboarding
+  │
+  ▼
+Ecrã Principal
+  │
+  ▼
+Animação do Scanner
+  │
+  ▼
+Captura de Fotografia
+  │
+  ▼
+Apresentação do Resultado
+  │
+  ▼
+Histórico / Nova Experiência
+```
 
-To learn more about developing your project with Expo, look at the following resources:
+## 5. Capturas de ecrã e demonstração
 
-- [Expo documentation](https://docs.expo.dev/): Learn fundamentals, or go into advanced topics with our [guides](https://docs.expo.dev/guides).
-- [Learn Expo tutorial](https://docs.expo.dev/tutorial/introduction/): Follow a step-by-step tutorial where you'll create a project that runs on Android, iOS, and the web.
+![splashScreen](splash.jpg)
 
-## Join the community
+![Página inicial](docs/screenshots/home.jpg)
 
-Join our community of developers creating universal apps.
+![scan](scan.jpg) 
 
-- [Expo on GitHub](https://github.com/expo/expo): View our open source platform and contribute.
-- [Discord community](https://chat.expo.dev): Chat with Expo users and ask questions.
+![Historico](history.jpg) 
+
+
+## 6. Como instalar e executar
+
+### Pré-requisitos
+
+- Node.js.
+- npm.
+- Expo CLI / Expo.
+- Android Studio ou dispositivo Android físico.
+- Development Build compatível com os módulos nativos utilizados.
+
+### Clonar o repositório
+
+```bash
+git clone https://github.com/Macuvule/corno.git
+```
+
+### Entrar na pasta do projecto
+
+```bash
+cd corno
+```
+
+### Instalar as dependências
+
+```bash
+npm install
+```
+
+### Executar a aplicação
+
+```bash
+npx expo start
+```
+
+Para executar num dispositivo Android com uma Development Build instalada, utilizar as opções de execução disponibilizadas pelo Expo.
+
+**Nota:** Como o projecto utiliza funcionalidades nativas, como o acesso à câmara, poderá ser necessário gerar e instalar uma Development Build compatível antes da execução.
